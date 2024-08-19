@@ -1,0 +1,127 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('Fundo.jpg');
+    background-size: cover;
+    /* Faz a imagem cobrir toda a área visível */
+    background-position: center;
+    /* Centraliza a imagem */
+    background-repeat: no-repeat;
+    /* Evita que a imagem se repita */
+    margin: 0;
+    /* Remove margens padrão do body */
+    padding: 0;
+    /* Remove espaçamentos padrão do body */
+    height: 100vh;
+    /* Faz com que o body ocupe toda a altura da viewport */
+    overflow: hidden;
+    /* Evita barras de rolagem, se necessário */
+    display: flex;
+    /* Usa Flexbox para centralizar o conteúdo */
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+}
+
+.countdown {
+    background-color: transparent;
+    /* Removendo o fundo do temporizador */
+    text-align: center;
+    font-size: 40px;
+    /* Ajuste o tamanho do texto geral conforme necessário */
+    color: #fff;
+    /* Cor do texto em branco */
+    z-index: 2;
+    /* Colocando o temporizador acima do fundo lateral */
+    transform: translateX(-25%);
+    /* Move o temporizador para a esquerda */
+}
+
+#countdown-timer {
+    display: flex;
+    flex-direction: column;
+    /* Organizando em coluna */
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    /* Ajustando o tamanho das letras (dias, horas, minutos, segundos) */
+    color: #fff;
+    /* Cor do texto em branco */
+}
+
+.countdown-message {
+    display: flex;
+    flex-direction: column;
+    /* Organizando em coluna */
+    justify-content: center;
+    align-items: center;
+    font-size: 110px;
+    /* Ajustando o tamanho das letras (dias, horas, minutos, segundos) */
+    color: #fff;
+    /* Cor do texto em branco */
+}
+
+.upper-row,
+.lower-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    /* Espaçamento entre os blocos */
+}
+
+.divider {
+    width: 50%;
+    /* Largura total do contêiner do temporizador */
+    height: 5px;
+    /* Altura da faixa divisória */
+    background-color: #fff;
+    /* Cor da faixa divisória */
+    margin: 20px 0;
+    /* Espaçamento acima e abaixo da faixa divisória */
+}
+
+.time-unit {
+    font-size: 250px;
+    /* Aumentando o tamanho dos números */
+    color: #fff;
+    /* Cor dos números */
+    margin: 0 20px;
+    /* Ajustando o espaçamento entre os números e os textos */
+}
+
+/* Estilos para a caixa de formulário oculta que aparece ao passar o mouse */
+.date-form {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Mostra a caixa quando o usuário passa o mouse sobre o contêiner */
+body:hover .date-form,
+.date-form:hover {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Estilo para o botão do formulário */
+.date-form button {
+    font-size: 16px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #649521;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.date-form button:hover {
+    background-color: #4b7a24;
+}
